@@ -1,0 +1,15 @@
+[Unit]
+Description=BOT_emoji_repa
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bot_kraft/emoji_bot
+ExecStart=/root/bot_kraft/emoji_bot/venv/bin/python3 /root/bot_kraft/emoji_bot/emoji_repa.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
